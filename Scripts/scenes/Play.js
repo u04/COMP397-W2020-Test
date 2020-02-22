@@ -43,6 +43,10 @@ var scenes;
             this._rollButton.on("click", function () {
                 _this.dice1ResultLabel.text = "hi";
                 _this.dice2ResultLabel.text = "bye";
+                var res1 = Math.floor(util.Mathf.RandomRange(1, 6));
+                var res2 = Math.floor(util.Mathf.RandomRange(1, 6));
+                _this.dice1ResultLabel.text = res1.toString();
+                _this.dice2ResultLabel.text = res2.toString();
             });
         };
         return Play;

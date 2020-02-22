@@ -4,6 +4,7 @@ module scenes {
         private _rollButton: objects.Button;
         private dice1ResultLabel: objects.Label;
         private dice2ResultLabel: objects.Label;
+        
 
 
         // PUBLIC PROPERTIES
@@ -44,6 +45,11 @@ module scenes {
             this._rollButton.on("click", ()=>{
                 this.dice1ResultLabel.text = "hi"
                 this.dice2ResultLabel.text = "bye"
+                var res1 = Math.floor(util.Mathf.RandomRange(1, 6));
+                var res2 = Math.floor(util.Mathf.RandomRange(1, 6));
+                this.dice1ResultLabel.text = res1.toString();
+                this.dice2ResultLabel.text = res2.toString();
+                
             });
 
         }

@@ -28,13 +28,22 @@ var scenes;
         //initialize and instatiate
         Play.prototype.Start = function () {
             this._rollButton = new objects.Button("./Assets/images/rollButton.png", 300, 120, true);
-            this._rollButton.width = 3;
+            //this._rollButton.width = 3;
+            this.dice1ResultLabel = new objects.Label("-1", "40px", "Consolas", "#000000", 200, 200, true);
+            this.dice2ResultLabel = new objects.Label("-2", "40px", "Consolas", "#000000", 200, 250, true);
             this.Main();
         };
         Play.prototype.Update = function () {
         };
         Play.prototype.Main = function () {
+            var _this = this;
             this.addChild(this._rollButton);
+            this.addChild(this.dice1ResultLabel);
+            this.addChild(this.dice2ResultLabel);
+            this._rollButton.on("click", function () {
+                _this.dice1ResultLabel.text = "hi";
+                _this.dice2ResultLabel.text = "bye";
+            });
         };
         return Play;
     }(objects.Scene));

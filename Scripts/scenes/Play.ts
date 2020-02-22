@@ -3,7 +3,7 @@ module scenes
     export class Play extends objects.Scene
     {
         // PRIVATE INSTANCE MEMBERS
- 
+        private _rollButton: objects.Button;
 
         // PUBLIC PROPERTIES
 
@@ -24,6 +24,7 @@ module scenes
         {
             
 
+            this._rollButton = new objects.Button(config.Game.ASSETS.getResult("rollButton"), 200, 200, true);
             
              this.Main();
         }        
@@ -35,7 +36,7 @@ module scenes
         
         public Main(): void 
         {
-
+            this.addChild(this._rollButton);
 
         }
 

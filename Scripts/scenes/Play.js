@@ -27,7 +27,8 @@ var scenes;
         // PUBLIC METHODS
         //initialize and instatiate
         Play.prototype.Start = function () {
-            this._rollButton = new objects.Button(config.Game.ASSETS.getResult("rollButton"), 200, 200, true);
+            this._rollButton = new objects.Button("./Assets/images/rollButton.png", 300, 120, true);
+            this._rollButton.width = 3;
             this.Main();
         };
         Play.prototype.Update = function () {

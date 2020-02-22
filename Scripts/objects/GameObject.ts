@@ -109,6 +109,7 @@ module objects
             this._isCentered = false;
             
             this.width = this.getBounds().width;
+
             this.height = this.getBounds().height;
 
             this.isCentered = centered;

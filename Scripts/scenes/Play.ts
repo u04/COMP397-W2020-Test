@@ -3,8 +3,8 @@ module scenes {
         // PRIVATE INSTANCE MEMBERS
         private _rollButton: objects.Button;
 
-        private norr: objects.GameObject;
-
+        //private norr?: objects.GameObject;
+//Play.ts, 2020/02/22, does the thing for Play scene
 
         private dice1ResultLabel: objects.Label;
         private dice2ResultLabel: objects.Label;
@@ -89,9 +89,10 @@ module scenes {
 
 
             this._rollButton = new objects.Button("./Assets/images/rollButton.png", 300, 370, true);
+            //this.norr = new objects.GameObject()
             //this._rollButton.width = 3;
-            this.dice1ResultLabel = new objects.Label("-1", "40px", "Consolas", "#000000", 150, 265, true);
-            this.dice2ResultLabel = new objects.Label("-2", "40px", "Consolas", "#000000", 450, 265, true);
+            this.dice1ResultLabel = new objects.Label(" ", "40px", "Consolas", "#000000", 150, 265, true);
+            this.dice2ResultLabel = new objects.Label(" ", "40px", "Consolas", "#000000", 450, 265, true);
 
  
             this.Main();

@@ -64,9 +64,10 @@ var scenes;
             this.sixBitmapRight.x = 350;
             this.sixBitmapRight.y = 50;
             this._rollButton = new objects.Button("./Assets/images/rollButton.png", 300, 370, true);
+            //this.norr = new objects.GameObject()
             //this._rollButton.width = 3;
-            this.dice1ResultLabel = new objects.Label("-1", "40px", "Consolas", "#000000", 150, 265, true);
-            this.dice2ResultLabel = new objects.Label("-2", "40px", "Consolas", "#000000", 450, 265, true);
+            this.dice1ResultLabel = new objects.Label(" ", "40px", "Consolas", "#000000", 150, 265, true);
+            this.dice2ResultLabel = new objects.Label(" ", "40px", "Consolas", "#000000", 450, 265, true);
             this.Main();
         };
         Play.prototype.Update = function () {
